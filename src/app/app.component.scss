@@ -42,30 +42,15 @@
   flex: 0 0 auto;
 }
 .project-dropdown {
+  top: 0;
   left: 35px;
+  position: absolute;
   width: 222px;
-  top: 0;
-  position: absolute;
-  height: max-content;
-  min-width: min-content;
-  flex: 0 0 auto;
-}
-.section {
-  left: 0;
-  top: 0;
-  position: absolute;
-  height: max-content;
-  min-width: min-content;
-  flex: 0 0 auto;
-}
-.dropdown-item {
-  width: max-content;
   height: max-content;
   min-width: min-content;
   flex: 0 0 auto;
 }
 .button {
-  margin: 0 16px 0 0;
   height: max-content;
   min-width: min-content;
   flex: 0 0 auto;
@@ -74,12 +59,7 @@
   margin: 0 8px 0 0;
   flex: 0 0 auto;
 }
-.button_1 {
-  height: max-content;
-  min-width: min-content;
-  flex: 0 0 auto;
-}
-.dropdown-item_1 {
+.dropdown-item {
   flex: 0 0 auto;
 }
 .navigation-drawer {

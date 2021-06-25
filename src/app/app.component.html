@@ -1,45 +1,41 @@
 <div class="header row">
   <div class="row-layout_1 row">
     <img src="https://static.infragistics.com/marketing/slingshot/slingshot-icon.svg" class="image" />
-    <button igxButton="flat" igxButtonColor="var(--igx-grays-900)" [disabled]="false" [igxToggleAction]="projectDropdown" class="button_1">
+    <button igxButton="flat" igxButtonColor="var(--igx-grays-900)" [disabled]="false" [igxToggleAction]="projectDropdown" class="button">
       <span>Home</span>
       <igx-icon>keyboard_arrow_down</igx-icon>
     </button>
     <igx-drop-down height="max-content" #projectDropdown class="project-dropdown">
-      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item_1">
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
         Home
       </igx-drop-down-item>
-      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item_1">
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
         Company Inc.
       </igx-drop-down-item>
-      <igx-drop-down-item [isHeader]="true" [disabled]="false" class="dropdown-item_1">
+      <igx-drop-down-item [isHeader]="true" [disabled]="false" class="dropdown-item">
         INDIGO.DESIGN
       </igx-drop-down-item>
-      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item_1">
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
         Growth hacking
       </igx-drop-down-item>
-      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item_1">
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
         Public preview
       </igx-drop-down-item>
-      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item_1">
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
         UX Feedback
       </igx-drop-down-item>
-      <igx-drop-down-item [isHeader]="true" [disabled]="false" class="dropdown-item_1">
+      <igx-drop-down-item [isHeader]="true" [disabled]="false" class="dropdown-item">
         Reveal
       </igx-drop-down-item>
-      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item_1">
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
         Onboarding
       </igx-drop-down-item>
-      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item_1">
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
         Analytics
       </igx-drop-down-item>
     </igx-drop-down>
   </div>
   <div class="row-layout_2 row">
-    <button igxButton="raised" igxButtonColor="var(--igx-surface-500)" igxButtonBackground="var(--igx-grays-900)" [disabled]="false" [igxToggleAction]="section" class="button">
-      <igx-icon>add</igx-icon>
-      <span>Task</span>
-    </button>
     <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
       <igx-icon>add_alert</igx-icon>
     </button>
@@ -47,11 +43,6 @@
       <igx-icon>message</igx-icon>
     </button>
     <igx-avatar [roundShape]="true" src="https://d3cg6cexo8t5ug.cloudfront.net/avatars/avatar6.png" size="small" class="avatar"></igx-avatar>
-    <igx-drop-down height="max-content" #section class="section">
-      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
-        Option
-      </igx-drop-down-item>
-    </igx-drop-down>
   </div>
 </div>
 <div class="row-layout row">
