@@ -1,7 +1,7 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('Teamcollaboration App', () => {
+describe('untitled-app App', () => {
   let page: AppPage;
 
   beforeEach(() => {
