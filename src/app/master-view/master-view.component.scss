@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  align-items: stretch;
+}
+.combo {
+  height: max-content;
+  min-width: min-content;
+  flex: 0 0 auto;
+}

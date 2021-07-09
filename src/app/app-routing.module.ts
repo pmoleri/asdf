@@ -4,14 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './error-routing/not-found/not-found.component';
 import { UncaughtErrorComponent } from './error-routing/error/uncaught-error.component';
 import { ErrorRoutingModule } from './error-routing/error-routing.module';
-import { MyTasksComponent } from './my-tasks/my-tasks.component';
-import { DashboardsComponent } from './dashboards/dashboards.component';
+import { MasterViewComponent } from './master-view/master-view.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'my-tasks', pathMatch: 'full' },
+  { path: '', redirectTo: 'master-view', pathMatch: 'full' },
   { path: 'error', component: UncaughtErrorComponent },
-  { path: 'my-tasks', component: MyTasksComponent, data: { text: 'My Tasks' } },
-  { path: 'dashboards', component: DashboardsComponent, data: { text: 'Dashboards' } },
+  { path: 'master-view', component: MasterViewComponent, data: { text: 'Master View' } },
   { path: '**', component: PageNotFoundComponent } // must always be last
 ];
 
