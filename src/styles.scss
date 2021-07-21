@@ -11,14 +11,12 @@ html, body {
 @import '~igniteui-angular/lib/core/styles/themes/index';
 
 @include igx-core();
-@include igx-typography();
+@include igx-typography($font-family: "Poppins");
 
 $custom-palette: igx-palette(
-  $primary: #09f,
-  $secondary: #72da67,
-  $surface: #222222,
-  $grays: #FFFFFF);
-@include igx-theme($palette: $custom-palette, $schema: $dark-schema);
+  $primary: #1daed9,
+  $secondary: #00c18a);
+@include igx-theme($palette: $custom-palette, $schema: $light-schema);
 
 body {
   background: var(--igx-surface-500);

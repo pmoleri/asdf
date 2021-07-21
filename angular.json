@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "teamcollaboration": {
+    "travelapp1": {
     "projectType": "application",
     "schematics": {
       "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/teamcollaboration",
+            "outputPath": "dist/travelapp1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,21 +73,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "teamcollaboration:build"
+            "browserTarget": "travelapp1:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "teamcollaboration:build:production"
+              "browserTarget": "travelapp1:build:production"
             },
             "es5": {
-                "browserTarget": "teamcollaboration:build:es5"
+                "browserTarget": "travelapp1:build:es5"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "teamcollaboration:build"
+            "browserTarget": "travelapp1:build"
           }
         },
         "test": {
@@ -124,16 +124,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "teamcollaboration:serve"
+            "devServerTarget": "travelapp1:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "teamcollaboration:serve:production"
+              "devServerTarget": "travelapp1:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "teamcollaboration"
+  "defaultProject": "travelapp1"
 }
