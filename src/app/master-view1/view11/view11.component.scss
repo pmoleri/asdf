@@ -1,0 +1,23 @@
+:host {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.row-layout {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex: 1 1 auto;
+  background-color: var(--igx-grays-100);
+}
+.title {
+  width: max-content;
+  height: max-content;
+  flex: 0 0 auto;
+  white-space: pre-wrap;
+}
+.row {
+  display: flex;
+}

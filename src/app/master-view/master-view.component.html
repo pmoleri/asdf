@@ -1,0 +1,19 @@
+<igx-navbar class="app-bar">
+  <div igxNavbarTitle>
+    <button igxButton="flat" igxButtonColor="var(--igx-surface-500)" [disabled]="false" routerLink="/master-view/view1" class="button">
+      <span>View 1</span>
+    </button>
+    <button igxButton="flat" igxButtonColor="var(--igx-surface-500)" [disabled]="false" routerLink="/master-view/view2" class="button">
+      <span>View 2</span>
+    </button>
+    <button igxButton="flat" igxButtonColor="var(--igx-surface-500)" [disabled]="false" routerLink="/master-view/view3" class="button">
+      <span>View 3</span>
+    </button>
+  </div>
+  <button igxButton="icon" igxButtonColor="var(--igx-surface-500)" type="icon" [disabled]="false">
+    <igx-icon>person</igx-icon>
+  </button>
+</igx-navbar>
+<div class="views-container">
+  <router-outlet></router-outlet>
+</div>
