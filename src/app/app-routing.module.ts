@@ -4,14 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './error-routing/not-found/not-found.component';
 import { UncaughtErrorComponent } from './error-routing/error/uncaught-error.component';
 import { ErrorRoutingModule } from './error-routing/error-routing.module';
-import { MyTasksComponent } from './my-tasks/my-tasks.component';
-import { DashboardsComponent } from './dashboards/dashboards.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'my-tasks', pathMatch: 'full' },
+  { path: '', redirectTo: 'in-app/dashboard', pathMatch: 'full' },
   { path: 'error', component: UncaughtErrorComponent },
-  { path: 'my-tasks', component: MyTasksComponent, data: { text: 'My Tasks' } },
-  { path: 'dashboards', component: DashboardsComponent, data: { text: 'Dashboards' } },
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  { path: 'in-app', loadChildren: () => import('./in-app/in-app.module').then(m => m.InAppModule) },
   { path: '**', component: PageNotFoundComponent } // must always be last
 ];
 
@@ -19,5 +17,4 @@ export const routes: Routes = [
   imports: [RouterModule.forRoot(routes), ErrorRoutingModule],
   exports: [RouterModule, ErrorRoutingModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule { }

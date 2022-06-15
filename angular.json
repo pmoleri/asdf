@@ -3,28 +3,29 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "teamcollaboration": {
-    "projectType": "application",
-    "schematics": {
-      "@schematics/angular:component": {
-      "style": "scss"
+    "travel-app-1": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
       },
-      "@schematics/angular:application": {
-        "strict": true
-      }
-    },
-    "root": "",
-    "sourceRoot": "src",
-    "prefix": "app",
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/teamcollaboration",
+            "outputPath": "dist/travel-app-1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -32,14 +33,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["./node_modules/hammerjs/hammer.min.js"]
+            "scripts": [
+              "./node_modules/hammerjs/hammer.min.js"
+            ]
           },
           "configurations": {
-            "es5": {
-                "tsConfig": "tsconfig-es5.app.json"
-            },
             "production": {
-                "budgets": [
+              "budgets": [
                 {
                   "type": "initial",
                   "maximumWarning": "5mb",
@@ -60,34 +60,32 @@
               "outputHashing": "all"
             },
             "development": {
-                 "buildOptimizer": false,
-                 "optimization": false,
-                 "vendorChunk": true,
-                 "extractLicenses": false,
-                 "sourceMap": true,
-                 "namedChunks": true
-            },
-            "defaultConfiguration": "production"
-          }
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "teamcollaboration:build"
-          },
           "configurations": {
             "production": {
-              "browserTarget": "teamcollaboration:build:production"
+              "browserTarget": "travel-app-1:build:production"
             },
-            "es5": {
-                "browserTarget": "teamcollaboration:build:es5"
+            "development": {
+              "browserTarget": "travel-app-1:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "teamcollaboration:build"
+            "browserTarget": "travel-app-1:build"
           }
         },
         "test": {
@@ -97,10 +95,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["./node_modules/hammerjs/hammer.min.js"],
+            "scripts": [
+              "./node_modules/hammerjs/hammer.min.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -108,32 +109,19 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "teamcollaboration:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "teamcollaboration:serve:production"
-            }
           }
         }
       }
     }
   },
-  "defaultProject": "teamcollaboration"
+  "defaultProject": "travel-app-1",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
